@@ -7,6 +7,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>postroad.portal Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>  
+      <spring.version>4.3.0.RELEASE</spring.version>  
+  </properties>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,6 +19,39 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <dependency>  
+        <groupId>jstl</groupId>  
+        <artifactId>jstl</artifactId>  
+        <version>1.2</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>taglibs</groupId>  
+        <artifactId>standard</artifactId>  
+        <version>1.1.2</version>  
+    </dependency>
+    
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-core</artifactId>  
+        <version>${spring.version}</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-webmvc</artifactId>  
+        <version>${spring.version}</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-beans</artifactId>  
+        <version>${spring.version}</version>
+    </dependency>  
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-context</artifactId>  
+        <version>${spring.version}</version>  
+    </dependency>
+    
   </dependencies>
   <build>
     <finalName>postroad.portal</finalName>
