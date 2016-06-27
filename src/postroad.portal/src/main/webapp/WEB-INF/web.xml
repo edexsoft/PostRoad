@@ -11,12 +11,14 @@
   	<display-name>postroad.portal Maven Webapp</display-name>
   	
   	<!-- 区分项目名称，防止默认重名 -->
-  	<!--  
     <context-param>  
+    	<!--  
         <param-name>webAppRootKey</param-name>  
-        <param-value>maven.example.root</param-value>  
-    </context-param>  
-  	-->
+        <param-value>maven.example.root</param-value>
+        -->
+        <param-name>contextConfigLocation</param-name>  
+    	<param-value>classpath:spring-context.xml</param-value>
+    </context-param>
   	
     <!-- Spring的log4j监听器 -->  
     <listener>  
@@ -51,7 +53,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
         <init-param>  
             <param-name>contextConfigLocation</param-name>  
-            <param-value>classpath*:spring-context.xml</param-value>  
+            <param-value>classpath:spring-context.xml</param-value>
         </init-param>  
         <load-on-startup>1</load-on-startup>  
     </servlet>  
