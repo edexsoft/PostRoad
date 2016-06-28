@@ -1,23 +1,22 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app
-	version="2.5"  
-    xmlns="http://java.sun.com/xml/ns/javaee"  
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  
-    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">  
-  	<display-name>postroad.portal Maven Webapp</display-name>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0" metadata-complete="true">
+    
+  	<display-name>postroad.portal</display-name>
+  	<description>protal web app of postroad</description>
   	
   	<!-- 区分项目名称，防止默认重名 -->
     <context-param>  
     	<!--  
         <param-name>webAppRootKey</param-name>  
-        <param-value>maven.example.root</param-value>
+        <param-value>com.edexsoft.postroad.portal</param-value>
+        <param-value>classpath:spring/business-config.xml, classpath:spring/tools-config.xml</param-value>
         -->
         <param-name>contextConfigLocation</param-name>  
-    	<param-value>classpath:spring-context.xml</param-value>
+    	<param-value>classpath:spring/spring-context.xml</param-value>
     </context-param>
   	
     <!-- Spring的log4j监听器 -->  
@@ -28,7 +27,8 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
     </listener>
   
-    <!-- 字符集 过滤器  -->  
+    <!-- 字符集 过滤器  -->
+    <!-- used to provide the ability to enter Chinese characters inside the Owner Form -->  
     <filter>  
         <filter-name>CharacterEncodingFilter</filter-name>  
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
@@ -46,20 +46,22 @@
         <url-pattern>/*</url-pattern>  
     </filter-mapping>
   
-    <!-- Spring view分发器   -->
-    
+    <!-- Spring view分发器   -->    
     <servlet>  
         <servlet-name>springMVC</servlet-name>  
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
         <init-param>  
             <param-name>contextConfigLocation</param-name>  
-            <param-value>classpath:spring-context.xml</param-value>
+            <param-value>classpath:spring/spring-context.xml</param-value>
         </init-param>  
         <load-on-startup>1</load-on-startup>  
     </servlet>  
     <servlet-mapping>  
-        <servlet-name>SpringMVC</servlet-name>  
+        <servlet-name>springMVC</servlet-name>  
         <url-pattern>/</url-pattern>  
-    </servlet-mapping>  
+    </servlet-mapping>
+    <welcome-file-list>
+	    <welcome-file>home/index</welcome-file>
+	</welcome-file-list>
   	
 </web-app>
