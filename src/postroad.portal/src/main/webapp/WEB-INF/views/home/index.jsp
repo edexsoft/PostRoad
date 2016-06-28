@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	home/index
+	/WEB-INF/views/home/index.jsp
 </body>
 </html>

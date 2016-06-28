@@ -16,9 +16,8 @@ import org.springframework.ui.Model;
 @Controller  
 public class HomeController {
 
-    @RequestMapping("/home/index")  
-    public ModelAndView Index() {  
-         System.out.println("Hello World");  
+    @RequestMapping(value={"/", "/home/index"})  
+    public ModelAndView Index() {
          Map<String, Object> map = new HashMap<String, Object>();  
 //         map.put("userName", name);  
          return new ModelAndView("/home/index",map);  

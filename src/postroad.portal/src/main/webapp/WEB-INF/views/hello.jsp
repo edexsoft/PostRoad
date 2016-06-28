@@ -8,6 +8,7 @@
 		<title>Hello</title>  
 	</head>  
 	<body>  
+		/WEB-INF/views/hello.jsp
 		你好，${userName }  
 	</body>  
 </html>
