@@ -18,6 +18,7 @@
 	<!-- com.edexsoft.postroad.portal.controllers -->
     <context:component-scan 
     	base-package="
+    		com.edexsoft.postroad.service,
     		com.edexsoft.postroad.portal.controllers,
     		com.edexsoft.postroad.portal.api">
     	<!--

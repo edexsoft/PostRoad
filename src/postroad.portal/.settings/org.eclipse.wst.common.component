@@ -13,6 +13,12 @@
         <dependent-module archiveName="postroad.service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.service/postroad.service">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="jackson-core-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-core/jackson-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-databind-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-databind/jackson-databind">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="postroad.portal"/>
         <property name="java-output-path" value="/postroad.portal/target/classes"/>
     </wb-module>
