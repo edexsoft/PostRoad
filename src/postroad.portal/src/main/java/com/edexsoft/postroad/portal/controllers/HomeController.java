@@ -2,7 +2,8 @@ package com.edexsoft.postroad.portal.controllers;
 
 import java.util.HashMap;  
 import java.util.Map;  
-   
+
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,11 +17,18 @@ import org.springframework.ui.Model;
 @Controller  
 public class HomeController {
 
-    @RequestMapping(value={"/", "/home/index"})  
-    public ModelAndView Index() {
+    @RequestMapping(value="/home/index")  
+    public ModelAndView index() {
          Map<String, Object> map = new HashMap<String, Object>();  
 //         map.put("userName", name);  
          return new ModelAndView("/home/index",map);  
+    }
+    
+    @RequestMapping(value="/home/about")  
+    public ModelAndView about() {
+         Map<String, Object> map = new HashMap<String, Object>();  
+//         map.put("userName", name);  
+         return new ModelAndView("/home/about",map);  
     }
     
 //	@RequestMapping("/greeting")  

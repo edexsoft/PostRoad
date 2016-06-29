@@ -51,7 +51,22 @@
         <artifactId>spring-context</artifactId>  
         <version>${spring.version}</version>  
     </dependency>
-    
+
+    <dependency>
+    	<groupId>com.edexsoft</groupId>
+    	<artifactId>postroad.domain</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.edexsoft</groupId>
+    	<artifactId>postroad.model</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.edexsoft</groupId>
+    	<artifactId>postroad.service</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>postroad.portal</finalName>
