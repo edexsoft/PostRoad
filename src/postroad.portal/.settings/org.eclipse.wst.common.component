@@ -7,12 +7,6 @@
         <dependent-module archiveName="postroad.domain-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.domain/postroad.domain">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="postroad.model-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.model/postroad.model">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="postroad.service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.service/postroad.service">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="jackson-core-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-core/jackson-core">
             <dependency-type>uses</dependency-type>
         </dependent-module>

@@ -18,16 +18,34 @@
   			param-name  指定参数名
     		param-value 指定参数值 
   	-->
+  	<!-- 区分项目名称，防止默认重名   -->
+  	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>com.edexsoft.postroad.portal</param-value>
+	</context-param>
+	<!-- log4j 配置参数 -->
+  	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j/log4j.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>600000</param-value>
+	</context-param>
+	<!-- spring配置参数 -->
     <context-param>  
-    	<!--
-    	区分项目名称，防止默认重名  
-        <param-name>webAppRootKey</param-name>  
-        <param-value>com.edexsoft.postroad.portal</param-value>
-        <param-value>classpath:spring/business-config.xml, classpath:spring/tools-config.xml</param-value>
-        -->
         <param-name>contextConfigLocation</param-name>  
     	<param-value>classpath:spring/spring-context.xml</param-value>
+    	<!--  
+        <param-value>classpath:spring/business-config.xml, classpath:spring/tools-config.xml</param-value>
+        -->
     </context-param>
+    
+    
+	
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
   	
   	<!-- 
   		listener 监听器接口  (建立,修改和删除会话或servlet环境时得到通知)

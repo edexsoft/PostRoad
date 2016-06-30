@@ -77,6 +77,21 @@
     	<artifactId>jackson-databind</artifactId>
     	<version>2.7.5</version>
     </dependency>
+    <dependency>
+    	<groupId>com.edexsoft</groupId>
+    	<artifactId>framework</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.edexsoft</groupId>
+    	<artifactId>framework.security</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.edexsoft</groupId>
+    	<artifactId>framework.security.implement</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>postroad.portal</finalName>
