@@ -4,13 +4,25 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <dependent-module archiveName="postroad.domain-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.domain/postroad.domain">
+        <dependent-module archiveName="postroad.domain.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.domain/postroad.domain">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jackson-core-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-core/jackson-core">
+        <dependent-module archiveName="postroad.domain.implemant.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.domain.implemant/postroad.domain.implemant">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jackson-databind-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-databind/jackson-databind">
+        <dependent-module archiveName="postroad.portal.model.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.portal.model/postroad.portal.model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="framework.security.implement.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/framework.security.implement/framework.security.implement">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="postroad.domain.repository.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.domain.repository/postroad.domain.repository">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="framework.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/framework/framework">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="framework.security.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/framework.security/framework.security">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="postroad.portal"/>

@@ -12,7 +12,7 @@ import com.edexsoft.postroad.domain.Product;
 import com.edexsoft.postroad.domain.ProductService;
  
 @Service("productService")
-@Transactional
+//@Transactional
 public class ProductServiceImpl implements ProductService {
 	private static final AtomicLong counter = new AtomicLong();
     

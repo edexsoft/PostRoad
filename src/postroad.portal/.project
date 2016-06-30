@@ -3,6 +3,13 @@
 	<name>postroad.portal</name>
 	<comment></comment>
 	<projects>
+		<project>postroad.domain</project>
+		<project>postroad.domain.implemant</project>
+		<project>postroad.portal.model</project>
+		<project>framework.security.implement</project>
+		<project>postroad.domain.repository</project>
+		<project>framework</project>
+		<project>framework.security</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

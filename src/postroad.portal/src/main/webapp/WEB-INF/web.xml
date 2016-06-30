@@ -4,7 +4,9 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="
 		http://java.sun.com/xml/ns/javaee
-		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd
+		http://www.springframework.org/schema/beans 
+	    http://www.springframework.org/schema/beans/spring-beans.xsd"
 	version="3.0" 
 	metadata-complete="true">
     
@@ -28,6 +30,7 @@
 		<param-name>log4jConfigLocation</param-name>
 		<param-value>classpath:log4j/log4j.properties</param-value>
 	</context-param>
+	<!-- log4j 日志页面的刷新间隔 -->
 	<context-param>
 		<param-name>log4jRefreshInterval</param-name>
 		<param-value>600000</param-value>
@@ -42,23 +45,24 @@
     </context-param>
     
     
-	
-	<listener>
+	<!-- log4j 监听器 -->
+	<!-- <listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-	</listener>
+	</listener> -->
   	
   	<!-- 
   		listener 监听器接口  (建立,修改和删除会话或servlet环境时得到通知)
   			listener-class 监听器类名
   	-->
-    <!-- Spring的log4j监听器 
-    <listener>  
-        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>  
-    </listener>
+    <!-- Spring 监听器
     -->
 	<listener>  
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
     </listener>
+    <!-- 防止Spring内存溢出监听器 -->
+    <!-- <listener>
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+    </listener> -->
   
   	<!--
   		filter 过滤器 
@@ -120,6 +124,18 @@
 	</welcome-file-list>
 	-->
   	
+  	<!-- 总错误处理 -->
+    <!-- <bean  id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="defaultErrorView">
+            <value>/error/index</value>
+        </property>
+        <property name="defaultStatusCode">
+            <value>500</value>
+        </property>
+        <property name="warnLogCategory">
+            <value>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver</value>
+        </property>
+    </bean> -->
   	<!-- 
   		error-page 错误页 
 	  		error-code     错误代码
