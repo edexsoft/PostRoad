@@ -25,7 +25,7 @@ public class ProductController {
 	 @Autowired
 	 ProductService productService;
 	
-	// 分页查询
+	// 鍒嗛〉鏌ヨ
 	@RequestMapping("/api/products")
     public ResponseEntity<List<Product>> list() {
 		List<Product> lstEntity = productService.findAll();
@@ -36,7 +36,7 @@ public class ProductController {
 		return new ResponseEntity<List<Product>>(lstEntity, HttpStatus.OK);
     }
 
-//	// 批量插入
+//	// 鎵归噺鎻掑叆
 //	@RequestMapping(value = "/api/products/", method = RequestMethod.POST)
 //    public ResponseEntity<Void> batch(@RequestBody List<Product> entities, UriComponentsBuilder ucBuilder) {
 //        HttpHeaders headers = new HttpHeaders();
@@ -44,7 +44,7 @@ public class ProductController {
 //        return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 //    }
 //	
-//	// 全部删除
+//	// 鍏ㄩ儴鍒犻櫎
 //	@RequestMapping(value = "/api/products/", method = RequestMethod.DELETE)
 //    public ResponseEntity<Product> clear() { 
 ////        userService.deleteAllUsers();

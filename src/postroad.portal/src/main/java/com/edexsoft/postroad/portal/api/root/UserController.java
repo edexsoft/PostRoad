@@ -24,7 +24,7 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	// 分页查询
+	// 鍒嗛〉鏌ヨ
 	@RequestMapping("/api/users")
     public ResponseEntity<List<User>> list() {
 		List<User> lstEntity = userService.findAll();
@@ -35,7 +35,7 @@ public class UserController {
 		return new ResponseEntity<List<User>>(lstEntity, HttpStatus.OK);
     }
 
-//		// 批量插入
+//		// 鎵归噺鎻掑叆
 //		@RequestMapping(value = "/api/users/", method = RequestMethod.POST)
 //	    public ResponseEntity<Void> batch(@RequestBody List<User> entities, UriComponentsBuilder ucBuilder) {
 //	        HttpHeaders headers = new HttpHeaders();
@@ -43,7 +43,7 @@ public class UserController {
 //	        return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 //	    }
 //	
-//		// 全部删除
+//		// 鍏ㄩ儴鍒犻櫎
 //		@RequestMapping(value = "/api/users/", method = RequestMethod.DELETE)
 //	    public ResponseEntity<User> clear() { 
 ////	        userService.deleteAllUsers();

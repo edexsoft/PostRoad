@@ -125,15 +125,17 @@
         <property 
         	name="basePackage" 
         	value="
-        		com.edexsoft.framework.security.mapper,
-        		com.edexsoft.postroad.domain.mapper" />
+        		com.edexsoft.framework.security,
+        		com.edexsoft.framework.security.implement,
+        		com.edexsoft.postroad.domain.repository" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
-    <!-- 
     <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="mapperInterface" value="com.edexsoft.framework.security.mapper.UserMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean> 
+    <!-- 
+    
 	-->
 	<!-- 
 	<bean id="userService" class="com.edexsoft.framework.security.userServiceImpl">

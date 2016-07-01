@@ -33,7 +33,8 @@
 	<!-- c3p0连接池 -->
 	<!-- <import resource="spring-c3p0.xml" /> -->
 	
-	<import resource="./spring-mvc.xml"/>
+	<import resource="classpath:spring/spring-mvc.xml"/>
+	<import resource="classpath:mybatis/spring-mybatis.xml" />
 	<!-- <import resource="./spring-security.xml"/> -->
 	
 	<!-- tomcat连接池 -->
