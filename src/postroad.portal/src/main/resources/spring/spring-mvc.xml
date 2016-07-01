@@ -22,7 +22,8 @@
     		com.edexsoft.postroad.domain,
     		com.edexsoft.postroad.domain.implement,
     		com.edexsoft.postroad.portal.controllers,
-    		com.edexsoft.postroad.portal.api">
+    		com.edexsoft.postroad.portal.api,
+    		com.edexsoft.postroad.portal.api.root">
     	<!--
     	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
     	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />  

@@ -2,18 +2,18 @@ package com.edexsoft.postroad.domain;
 
 public class Product {
 	
-	private long id;    
+	private Integer id;    
     private String name;
  
     public Product(){
         id=0;
     }
     
-    public long getId() {
+    public Integer getId() {
         return id;
     }
  
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
  

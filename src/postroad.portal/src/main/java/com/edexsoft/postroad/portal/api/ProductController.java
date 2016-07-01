@@ -54,7 +54,7 @@ public class ProductController {
 	
 	
 	@RequestMapping(value = "/api/product/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Product> get(@PathVariable("id") long id){		
+	public ResponseEntity<Product> get(@PathVariable("id") int id){		
 		Product oEntity = productService.findById(id);
         if (oEntity == null) {
             return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
@@ -76,7 +76,7 @@ public class ProductController {
     }
 	
 	@RequestMapping(value = "/api/product/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Product> put(@PathVariable("id") long id, @RequestBody Product entity) {
+    public ResponseEntity<Product> put(@PathVariable("id") int id, @RequestBody Product entity) {
 		Product oEntity = productService.findById(id);
          
         if (oEntity==null) {
@@ -94,13 +94,13 @@ public class ProductController {
     }
 	
 	@RequestMapping(value = "/api/product/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Product> delete(@PathVariable("id") long id) { 
+    public ResponseEntity<Product> delete(@PathVariable("id") int id) { 
 		Product oEntity = productService.findById(id);
         if (oEntity == null) {
             return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
         }
  
-        productService.deleteById(id);
+        productService.delete(id);
         return new ResponseEntity<Product>(HttpStatus.NO_CONTENT);
     }	
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- http://www.mybatis.org/mybatis-3/zh/ -->
+<configuration>
+	<!-- 用来在Mapper.xml文件里使用不同的数据库SQL -->
+	<databaseIdProvider type="DB_VENDOR">
+		<!-- <property name="mysql" value="mysql" /> -->
+		<property name="Oracle" value="oracle" />
+		<property name="SQL Server" value="sqlserver"/>
+		<property name="DB2" value="db2"/>        
+	</databaseIdProvider>
+	<typeAliases>
+		<typeAlias type="com.edexsoft.framework.security.User" alias="User" />
+		<typeAlias type="com.edexsoft.postroad.domain.Product" alias="Product" />
+	</typeAliases>
+	<mappers>
+		<!-- 
+		<mapper resource="com/edexsoft/framework/security/mapper/UserMapper.xml" /> 
+		<mapper resource="org/mybatis/builder/BlogMapper.xml"/>
+		<mapper url="file:///var/mappers/BlogMapper.xml"/>
+		<mapper class="org.mybatis.builder.BlogMapper"/>
+		<package name="org.mybatis.builder"/>
+		-->
+	</mappers>
+</configuration>
