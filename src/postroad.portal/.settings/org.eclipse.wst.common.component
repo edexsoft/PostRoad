@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="postroad.portal">
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
@@ -31,13 +30,13 @@
         <dependent-module archiveName="postroad.domain.implemant-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/postroad.domain.implemant/postroad.domain.implemant">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jackson-core-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-core/jackson-core">
+        <dependent-module archiveName="jackson-databind.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-databind/jackson-databind">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jackson-databind-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-databind/jackson-databind">
+        <dependent-module archiveName="jackson-core.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-core/jackson-core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jackson-annotations-2.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-annotations/jackson-annotations">
+        <dependent-module archiveName="jackson-annotations.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jackson-annotations/jackson-annotations">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="postroad.portal"/>

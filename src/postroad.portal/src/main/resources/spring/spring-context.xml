@@ -33,9 +33,12 @@
 	<!-- c3p0连接池 -->
 	<!-- <import resource="spring-c3p0.xml" /> -->
 	
+	<!-- <import resource="./spring-security.xml"/> -->
 	<import resource="classpath:spring/spring-mvc.xml"/>
 	<import resource="classpath:mybatis/spring-mybatis.xml" />
-	<!-- <import resource="./spring-security.xml"/> -->
+	<import resource="classpath:spring/spring-repostory.xml"/>
+	<import resource="classpath:spring/spring-service.xml"/>
+	<import resource="classpath:spring/spring-presentation.xml"/>
 	
 	<!-- tomcat连接池 -->
 	<!-- <import resource="spring-tomcat-pool.xml" /> -->
@@ -66,7 +69,23 @@
 	</bean>-->
 
 
-	
+	<!-- <aop:aspectj-autoproxy /> -->
+
+	<!-- <aop:config>
+		<aop:pointcut id="appService"
+			expression="execution(* com.github.ichenkaihua.service..*Service*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="appService" />
+	</aop:config> --> 
+
+	<!-- <tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="select*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="sava*" />
+
+		</tx:attributes>
+	</tx:advice> -->
 
 
 	<!-- 配置事务异常封装 -->

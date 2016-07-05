@@ -10,6 +10,9 @@
 		<project>postroad.domain.repository</project>
 		<project>framework</project>
 		<project>framework.security</project>
+		<project>jackson-databind</project>
+		<project>jackson-core</project>
+		<project>jackson-annotations</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

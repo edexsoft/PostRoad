@@ -3,10 +3,12 @@ package com.edexsoft.postroad.domain.repository;
 import java.util.List;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.stereotype.Service;
 
 import com.edexsoft.postroad.domain.Product;
 
-public class ProductDaoImpl extends SqlSessionDaoSupport implements ProductDao{
+//@Service("productDao")
+public class ProductDaoImpl extends SqlSessionDaoSupport implements ProductMapper{
 	
 //	@Override
 	public Product findById(Integer id){

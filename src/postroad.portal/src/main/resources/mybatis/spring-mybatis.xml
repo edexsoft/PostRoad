@@ -14,9 +14,10 @@
 	<!-- 自动扫描 -->
     <!-- <context:component-scan base-package="com.aheizi" /> -->
     <!-- 引入配置文件 -->
-    <bean id="propertyConfigurer"
+    <bean 
+    	id="propertyConfigurer"
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:mybatis/jdbc-mysql.properties" />
+        <property name="location" value="classpath:properties/jdbc-mysql.properties" />
     </bean>
     <!-- 
 	 也可以不用  .properties 文件而是用以下格式。
@@ -90,7 +91,7 @@
 		<property name="mapperLocations">
 			<list>
 				<value>classpath*:com/edexsoft/framework/security/mapper/*.xml</value>
-				<value>classpath*:com/edexsoft/postroad/domain/mapper/*.xml</value>
+				<value>classpath*:com/edexsoft/postroad/domain/repository/*.xml</value>
 			</list>
 		</property>
 		<!--  <property name="typeAliasesPackage" value="com.github.ichenkaihua.model"/> -->
@@ -102,26 +103,10 @@
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 
-	<!-- <aop:aspectj-autoproxy /> -->
-
-	<!-- <aop:config>
-		<aop:pointcut id="appService"
-			expression="execution(* com.github.ichenkaihua.service..*Service*.*(..))" />
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="appService" />
-	</aop:config> --> 
-
-	<!-- <tx:advice id="txAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="select*" read-only="true" />
-			<tx:method name="find*" read-only="true" />
-			<tx:method name="get*" read-only="true" />
-			<tx:method name="sava*" />
-
-		</tx:attributes>
-	</tx:advice> -->
+	
 
 	<!-- 查找类路径下的映射器并自动将它们创 建 成 MapperFactoryBean -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property 
         	name="basePackage" 
         	value="
@@ -129,19 +114,9 @@
         		com.edexsoft.framework.security.implement,
         		com.edexsoft.postroad.domain.repository" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-    </bean>
-    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="com.edexsoft.framework.security.mapper.UserMapper" />
-		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
-	</bean> 
-    <!-- 
+    </bean> -->
     
-	-->
-	<!-- 
-	<bean id="userService" class="com.edexsoft.framework.security.userServiceImpl">
-		<property name="userMapper" ref="userMapper" />
-	</bean>
- 	-->
+    
  	
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />

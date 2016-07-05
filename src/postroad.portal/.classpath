@@ -39,8 +39,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/postroad.domain"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/postroad.domain.implemant"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/postroad.domain.repository"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/postroad.portal.model"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/postroad.domain.repository"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/postroad.domain.implemant"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

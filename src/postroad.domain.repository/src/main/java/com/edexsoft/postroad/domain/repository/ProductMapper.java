@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.edexsoft.postroad.domain.Product;
 
-public interface ProductDao {
+public interface ProductMapper {
 	Product findById(Integer id);
 	Product findByAccount(String account);
 	List<Product> findAll();

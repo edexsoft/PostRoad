@@ -23,7 +23,7 @@ import com.edexsoft.postroad.domain.ProductService;
 public class ProductController {
 	
 	 @Autowired
-	 ProductService productService;
+	 private ProductService productService;
 	
 	// 分页查询
 	@RequestMapping("/api/products")
@@ -47,7 +47,7 @@ public class ProductController {
 //	// 全部删除
 //	@RequestMapping(value = "/api/products/", method = RequestMethod.DELETE)
 //    public ResponseEntity<Product> clear() { 
-////        userService.deleteAllUsers();
+////        productService.deleteAllUsers();
 //        return new ResponseEntity<Product>(HttpStatus.NO_CONTENT);
 //    }
 
