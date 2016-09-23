@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 导入属性配置文件 -->
+	<context:property-placeholder location="classpath:site.properties" />
+
+	<context:component-scan
+		base-package="
+            com.edexsoft.postroad.domain,
+            com.edexsoft.postroad.portal.api.controllers,
+            com.edexsoft.postroad.portal.api.root.controllers,
+            com.edexsoft.postroad.portal.web.controllers,
+            com.edexsoft.postroad.portal.m.controllers,
+            com.edexsoft.postroad.portal.wx.controllers,
+            com.edexsoft.postroad.portal.root.controllers">
+		<!-- <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/> 
+			<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" 
+			/> <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController" 
+			/> <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" 
+			/> -->
+	</context:component-scan>
+
+	<import resource="classpath:spring/spring-mybatis.xml" />
+	<import resource="classpath:spring/spring-mvc.xml" />
+	<!--  
+	<import resource="classpath:spring/spring-repostory.xml" />
+    <import resource="classpath:spring/spring-service.xml" />
+    <import resource="classpath:spring/spring-presentation.xml" />
+	-->
+	
+	<!--  
+	
+	-->
+
+</beans>

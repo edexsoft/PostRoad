@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+	<mvc:resources mapping="/cdn/**" location="/cdn/" />
+
+	<!-- 会自动注册RequestMappingHandlerMapping与RequestMappingHandlerAdapter两个bean, 
+		是spring MVC为@Controllers分发请求所必须的。 并提供了： 数据绑定支持， @NumberFormatannotation支持， 
+		@DateTimeFormat支持， @Valid支持， 读写XML的支持（JAXB）， 读写JSON的支持（Jackson） -->
+	<mvc:annotation-driven>
+		<!-- <mvc:message-converters> <bean class="org.springframework.http.converter.StringHttpMessageConverter" 
+			/> <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" 
+			/> </mvc:message-converters> -->
+	</mvc:annotation-driven>
+
+	<!-- 如果当前请求为'/'时，则转发到'/home/index' -->
+	<mvc:view-controller path="/" view-name="forward:/home/index" />
+	<!-- 视图解析器 -->
+	<mvc:view-resolvers>
+		<mvc:content-negotiation use-not-acceptable="true">
+			<mvc:default-views>
+				<bean class="org.springframework.web.servlet.view.JstlView">
+					<property name="url" value="" />
+				</bean>
+			</mvc:default-views>
+		</mvc:content-negotiation>
+		<mvc:bean-name />
+		<mvc:jsp prefix="/areas/" suffix=".jsp" />
+	</mvc:view-resolvers>
+</beans>  

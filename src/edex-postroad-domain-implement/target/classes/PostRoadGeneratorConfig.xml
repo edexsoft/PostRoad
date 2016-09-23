@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- <classPathEntry location="D:/ci/maven/m2/repository/mysql/mysql-connector-java/6.0.4/mysql-connector-java-6.0.4.jar" 
+		/> -->
+	<classPathEntry
+		location="D:/ci/maven/m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar" />
+	<classPathEntry
+		location="D:/ci/maven/m2/repository/com/edexsoft/edex-data/0.0.1-SNAPSHOT/edex-data-0.0.1-SNAPSHOT.jar" />
+
+
+	<context id="MySql" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost:3306/db_postroad?zeroDateTimeBehavior=convertToNull&amp;serverTimezone=GMT%2b8"
+			driverClass="com.mysql.jdbc.Driver" password="sa" userId="root" />
+
+		<javaModelGenerator targetPackage="com.edexsoft.postroad.domain"
+			targetProject="domain/src/main/java">
+			<property name="rootClass" value="com.edexsoft.framework.data.BaseEntity" />
+		</javaModelGenerator>
+
+		<!-- TODO:move to /src/main/resources -->
+		<!-- <sqlMapGenerator targetPackage="sqlMap" targetProject="domain.implement/src/main/resources" 
+			/> -->
+		<sqlMapGenerator targetPackage="com.edexsoft.postroad.domain.repository"
+			targetProject="edex-postroad-domain-implement/src/main/java" />
+
+		<javaClientGenerator targetPackage="com.edexsoft.postroad.domain.repository"
+			targetProject="edex-postroad-domain-implement/src/main/java" type="XMLMAPPER">
+			<property name="exampleMethodVisibility" value="public" />
+			<!-- <property name="rootInterface" value="com.edexsoft.framework.data.ICrudGenericDAO" 
+				/> -->
+		</javaClientGenerator>
+		
+		<!--  
+		<table schema="db_postroad" tableName="t_user" domainObjectName="User">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="user_id" property="ssoUserId" />
+		</table>
+		-->
+
+	</context>
+</generatorConfiguration>
